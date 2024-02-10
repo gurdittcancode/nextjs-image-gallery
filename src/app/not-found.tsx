@@ -6,3 +6,5 @@ export default function NotFound() {
     </div>
   )
 }
+
+// https://youtu.be/fqfer6xMp2A?&t=8027

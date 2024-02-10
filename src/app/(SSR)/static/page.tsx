@@ -17,7 +17,7 @@ export default async function Page() {
 
 	const width = Math.min(500, image.width)
 	const height = Math.min((width / image.width) * image.height, image.height)
-	//calculates aspect-ratio
+							//calculates aspect-ratio
 
 	return (
 		<div className="d-flex flex-column align-items-center">

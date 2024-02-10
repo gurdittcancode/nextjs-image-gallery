@@ -20,6 +20,7 @@ export default async function Page() {
 		}
 	)
 	//it is safe to write api key here as this will only run on server, so user can't see the network call
+	
 	const image: UnsplashImage = await response.json()
 
 	const width = Math.min(500, image.width)

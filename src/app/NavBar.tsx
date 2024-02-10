@@ -1,8 +1,8 @@
 "use client"
 
 import Link from "next/link"
-import { usePathname, useRouter, useSearchParams } from "next/navigation"
-import { Container, Nav, Navbar } from "react-bootstrap" //because this is client component
+import { usePathname } from "next/navigation"
+import { Container, Nav, NavDropdown, Navbar } from "react-bootstrap" //because this is client component
 
 export const NavBar = () => {
 	const pathname = usePathname() //to get URL
@@ -31,6 +31,14 @@ export const NavBar = () => {
 						<Nav.Link as={Link} href="/isr" active={pathname === "/isr"}>
 							ISR
 						</Nav.Link>
+						<Nav.Link as={Link} href="/search" active={pathname === "/search"}>
+							Search
+						</Nav.Link>
+						<NavDropdown title="Topics" id="topics-dropdown">
+							<NavDropdown.Item as={Link} href="/topics/health">Health</NavDropdown.Item>
+							<NavDropdown.Item as={Link} href="/topics/coding">Coding</NavDropdown.Item>
+							<NavDropdown.Item as={Link} href="/topics/Fitness">Fitness</NavDropdown.Item>
+						</NavDropdown>
 					</Nav>
 				</Navbar.Collapse>
 			</Container>
