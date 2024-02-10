@@ -12,7 +12,7 @@ export async function GET(request: Request) {
 	const query = searchParams.get("query")
 
 	if (!query) {
-		//it's a response, but it extends the functionality
+		//it's a response type, but it extends the functionality
 		return NextResponse.json({ error: "No query provided" }, { status: 400 })
 	}
 
